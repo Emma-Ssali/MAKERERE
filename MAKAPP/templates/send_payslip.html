@@ -1,0 +1,14 @@
+{% extends 'includes/base.html' %}
+{% block title %} Send Payslip {% endblock %}
+{% block content %}
+{% include 'includes/navbar.html' %}
+<div class="container">
+    <h1>Send Email</h1>
+    <h2>Send Email with Attachment</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Send Email</button>
+    </form>
+</div>
+{% endblock %}

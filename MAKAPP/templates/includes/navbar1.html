@@ -1,0 +1,28 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Makerere Logo -->
+  <a class="navbar-brand">
+    <img src="{% static 'img/makerere-university-logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+    Makerere University
+  </a>
+
+  <!-- Navbar Toggler -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar Content -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <!-- Login -->
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'login' %}">Login</a>
+      </li>
+      <!-- About -->
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">About</a>
+      </li>
+    </ul>
+    <!-- Search Form (if needed) -->
+  </div>
+</nav>

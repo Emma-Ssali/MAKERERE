@@ -1,0 +1,31 @@
+{% extends 'includes/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+{% include 'includes/navbar.html' %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <table class="table table-hover">
+              <thead>
+                <h1>List Of Employees</h1>
+                <tr>
+                   <th scope="col">Job</th>
+                   <th scope="col">Name</th>
+                   <th scope="col">Payslip</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for employee in employee %}
+                <tr>
+                   <td>{{ employee.jobtitle_status.position }}</td>
+                   <td><span>{{ employee.first_name }}</span> <span>{{ employee.last_name }}</span></td>
+                   <td><a class="btn btn-success btn-sm" href="{% url 'payslip' employee.id %}">View PaySlip</a></td>
+                </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

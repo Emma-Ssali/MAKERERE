@@ -1,0 +1,10 @@
+{% load static %}
+<h1 style="color: green; font-size: 20px;"><img src="{% static 'img/makerere-university-logo.png' %}" width="30" height="30">Makerere University PaySlip</h1>
+<hr>
+<h1>Name: <span>{{ employee.first_name }}</span> <span>{{ employee.last_name }}</span></h1>
+<p>Email: {{ employee.email }}</p>
+<p>Job: {{ employee.jobtitle_status.position }}</p>
+<p>Hours: {{ employee.hours }}</p>
+<hr>
+<p>Gross Salary: {{ employee.gross_salary}}</p>
+<hr>
